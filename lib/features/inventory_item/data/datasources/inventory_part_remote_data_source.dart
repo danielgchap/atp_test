@@ -58,7 +58,7 @@ class InventoryPartRemoteDataSourceImpl
     );
 
     if (response.statusCode == 200) {
-      print('Consume Success: ${response.body}');
+      print('Consume Success:\n\n ${response.body}');
       InventoryPart part = InventoryPart.fromJson(json.decode(response.body));
       return InventoryParts(inventoryItems: [part]);
     } else {
@@ -76,7 +76,7 @@ class InventoryPartRemoteDataSourceImpl
     );
 
     if (response.statusCode == 200) {
-      print('Receiving Success: ${response.body}');
+      print('Receiving Success:\n\n ${response.body}');
       InventoryPart part = InventoryPart.fromJson(json.decode(response.body));
       return InventoryParts(inventoryItems: [part]);
     } else {
